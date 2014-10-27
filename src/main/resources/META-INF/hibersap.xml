@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hibersap>
+	<session-manager name="sapenvtest">
+		<context>org.hibersap.execution.jco.JCoContext</context>
+		<jca-connectionspec-factory>org.hibersap.execution.jca.cci.SapBapiJcaAdapterConnectionSpecFactory</jca-connectionspec-factory>
+		<properties>
+			<property name="jco.client.client" value="your_client" />
+			<property name="jco.client.user" value="your_user" />
+			<property name="jco.client.passwd" value="your_passwd" />
+			<property name="jco.client.lang" value="your_lang" />
+			<property name="jco.client.ashost" value="your_ashost" />
+			<property name="jco.client.sysnr" value="your_sysnr" />
+			<property name="jco.destination.pool_capacity" value="your_pool_capacity" />
+		</properties>
+		<annotated-classes>
+			<annotated-class>com.dunkcoder.hibersap.BapiCompanycodeGetlist</annotated-class>
+			<annotated-class>com.dunkcoder.hibersap.RfcSystemInfo</annotated-class>
+			<annotated-class>com.dunkcoder.hibersap.StfcConnection</annotated-class>
+		</annotated-classes>
+		<execution-interceptor-classes />
+		<bapi-interceptor-classes />
+		<validation-mode>AUTO</validation-mode>
+	</session-manager>
+</hibersap>
